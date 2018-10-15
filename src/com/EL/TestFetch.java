@@ -1,5 +1,4 @@
-package com;
-
+package com.EL;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
