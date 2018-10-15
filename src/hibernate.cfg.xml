@@ -12,7 +12,8 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>  
-    	<mapping resource="employee.hbm.xml"/>  
+    	<!-- <mapping resource="employee.hbm.xml"/>  --> 
+    	<mapping class="com.Employee" />
     </session-factory>  
   
 </hibernate-configuration>  
