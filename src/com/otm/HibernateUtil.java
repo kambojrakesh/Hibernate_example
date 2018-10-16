@@ -1,4 +1,4 @@
-package com.EL;
+package com.otm;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

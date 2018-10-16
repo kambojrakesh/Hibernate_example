@@ -1,4 +1,4 @@
-package com.EL;
+package com.otm;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,11 +6,14 @@ import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.Columns;
@@ -29,10 +32,11 @@ public class Employee implements java.io.Serializable {
 	@Column(name="Last_Name") 
 	private String lastName;  
 	
-	@ElementCollection
+	/*@ElementCollection(fetch=FetchType.EAGER)
 	@JoinTable(name="USER_ADDRESS",
 				joinColumns=@JoinColumn(name="USER_ID")
-			)
+			)*/
+	@OneToMany
 	private Collection<Address> address=new ArrayList<Address>();
 
 	public Collection<Address> getAddress() {
