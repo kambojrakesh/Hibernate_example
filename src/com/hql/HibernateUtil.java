@@ -1,4 +1,4 @@
-package com.first;
+package com.hql;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

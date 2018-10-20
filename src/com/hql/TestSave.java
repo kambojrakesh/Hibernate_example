@@ -1,8 +1,7 @@
-package com.first;
+package com.hql;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -28,12 +27,6 @@ public class TestSave {
          a1.setCity("tr");
          a1.setState("on");
          a1.setCountry("CA");
-         
-         
-         List ss=new ArrayList();
-         ss.add(a);
-         ss.add(a1);
-         emp.setAddress(ss);
          
          s.save(emp);
          t.commit();
